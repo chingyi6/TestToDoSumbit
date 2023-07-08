@@ -4,19 +4,7 @@ var body = require('body');
 const r = require('./route')
 
 
-module.exports.handler = function(req, resp, context) {
-    console.log('hello world');
-/*
-    var params = {
-        path: req.path,
-        queries: req.queries,
-        headers: req.headers,
-        method : req.method,
-        requestURI : req.url,
-        clientIP : req.clientIP,
-    }
-    */
-        
+module.exports.handler = function(req, resp, context) {      
     getRawBody(req, function(err, body) {
         resp.setHeader('content-type', 'application/json');
 
